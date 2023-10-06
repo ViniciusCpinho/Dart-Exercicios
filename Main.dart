@@ -11,16 +11,18 @@ void main() {
   Funcionario funcionario = new Funcionario(nome: entradaUsuario);
   var nomeFuncionario = funcionario.nome;
 
-  Gerente gerente = new Gerente(nome: 'Poderoso Chefinho', idade: 12, cpf: '12345678910', salario: '1200', setor: 'marketing');
+  Gerente gerente = new Gerente(nome: 'Poderoso Chefinho', idade: 12, cpf: '12345678910', salario: '1200', setor: 'marketing', bonus: 100);
+  print(gerente.bonus);
+  
   // #endregion
 
   int maxTries = 0;
 
   while(true){
-    if(maxTries < 4){
+    if(maxTries >= 4){
       break;
     }
-
+  
     print("Olá $nomeFuncionario a ação que deseja realizar");
     print(" -- Aumento");
     print(" -- Reconhecimento");

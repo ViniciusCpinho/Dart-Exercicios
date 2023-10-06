@@ -2,13 +2,13 @@ import 'dart:math';
 import 'funcionario.dart';
 
 class Gerente extends Funcionario{
-  String? setor;
 
-  Gerente({String? nome,int? idade,String? cpf,String? salario,String? cargo,String? setor}):
-  super(nome: nome,idade: idade,cpf: cpf,salario: salario){
-    this.setor = setor;
+  Gerente({String? nome,int? idade,String? cpf,double? salario,String? cargo,String? setor, double? bonus}):
+  super(nome: nome,idade: idade,cpf: cpf,salario: salario, setor: setor, bonus: bonus){
     this.cargo = 'gerente';
+    this.bonus = bonus != null ? bonus * 0.2 : 0.0 ;
   }
+
 
   void increase(nomeDoInfeliz) {
   int possibilidade = Random().nextInt(50);
